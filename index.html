@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 11px black solid;
+        }
+        html, body {
+           overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <button id="fs">Fullscreen</button>
+    <canvas id="c" height="600" width="800"></canvas>
+    <div id="log"></div>
+    <script src="canvas-gamepad.js"></script>
+    <script>
+        const c = document.getElementById('c');
+
+        const gamepad = new CanvasGamepad({
+            canvasId: 'c'
+        });
+
+        gamepad.addEventListener((data) => {
+            const log = document.getElementById('log');
+            log.innerHTML = log.innerHTML + "<div>"+ JSON.stringify(data) +"</div>";
+        });
+
+        window.addEventListener('resize', () => {
+            console.log('window resize');
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+            gamepad.refresh();
+        }, false);
+        c.addEventListener('fullscreenchange', ()=> {
+            c.width = window.innerWidth;
+            c.height = window.innerHeight;
+            gamepad.refresh();
+        });
+        document.getElementById('fs').addEventListener('click', evt => {
+            const c = document.getElementById('c');
+            c.requestFullscreen()/*.then(() => {
+                const rect = c.getBoundingClientRect();
+                c.width = window.innerWidth;
+                c.height = window.innerHeight;
+                setTimeout(() => {
+                    gamepad.refresh();
+                }, 200);
+            })*/;
+        });
+    </script>
+    </body>
+</html>

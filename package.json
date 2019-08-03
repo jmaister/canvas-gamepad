@@ -1,0 +1,19 @@
+{
+  "name": "canvas-gamepad",
+  "version": "1.0.0",
+  "description": "Gamepad for HTML canvas games.",
+  "main": "canvas-gamepad.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "canvas",
+    "gamepad",
+    "buttons",
+    "overlay",
+    "game",
+    "html5"
+  ],
+  "author": "Jordi Burgos <jordiburgos@gmail.com>",
+  "license": "MIT"
+}
