@@ -5,7 +5,7 @@ Screen gamepad for HTML canvas games.
 
 It draws a gamepad over your canvas and receives the click or tap events on the buttons and the direction pad (d-pad).
 
-![Screenshot]([docs/screenshot.png](https://raw.githubusercontent.com/jmaister/canvas-gamepad/master/docs/screenshot.png))
+![Screenshot](https://raw.githubusercontent.com/jmaister/canvas-gamepad/master/docs/screenshot.png)
 
 # Features
 
