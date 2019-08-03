@@ -1,7 +1,7 @@
 {
   "name": "canvas-gamepad",
   "version": "1.0.0",
-  "description": "Gamepad for HTML canvas games.",
+  "description": "Screen gamepad for HTML canvas games.",
   "main": "canvas-gamepad.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

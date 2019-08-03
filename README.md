@@ -1,7 +1,8 @@
 
 # canvas-gamepad
 
-Gamepad over HTML canvas.
+Screen gamepad for HTML canvas games.
+
 It draws a gamepad over your canvas and receives the click or tap events on the buttons and the direction pad (d-pad).
 
 ![Screenshot](docs/screenshot.png)
